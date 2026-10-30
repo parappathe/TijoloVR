@@ -1,0 +1,35 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #14081e; font-family: system-ui, sans-serif; }
+#app canvas { display: block; touch-action: none; }
+#vr {
+  position: fixed; right: 18px; bottom: 18px;
+  padding: 12px 24px; font-size: 17px; font-weight: 700;
+  color: #2a0d06; background: #ffd25a; border: 0; border-radius: 12px; cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+#vr:disabled { background: #3e1a52; color: #f1e3f6; cursor: default; }
+#hud {
+  display: none; position: fixed; left: 16px; top: 14px; width: 260px;
+  color: #fbf1e6; font: 15px/1.5 system-ui, sans-serif; pointer-events: none;
+  background: rgba(20,8,30,0.78); padding: 10px 14px; border-radius: 10px; border: 1px solid #5e2a78;
+}
+#hud b { color: #ffd25a; }
+#hud em { color: #c4a8d4; font-size: 13px; font-style: normal; }
+#msg {
+  display: none; position: fixed; left: 50%; top: 22%; transform: translateX(-50%); max-width: calc(100vw - 32px);
+  font: 700 22px/1.35 system-ui, sans-serif; text-align: center; pointer-events: none;
+  background: rgba(20,8,30,0.7); padding: 8px 16px; border-radius: 10px; text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+#hint {
+  position: fixed; left: 16px; bottom: 18px; right: 300px; color: #fbf1e6; font: 14px/1.5 system-ui, sans-serif;
+  pointer-events: none;
+}
+#hint span { display: inline-block; background: rgba(20,8,30,0.75); padding: 6px 10px; border-radius: 8px; }
+#hint:empty { display: none; }
+#fps {
+  display: none; position: fixed; right: 16px; top: 14px; color: #ffdf6e; font: bold 15px monospace;
+  background: rgba(0,0,0,0.6); padding: 4px 8px; border-radius: 6px; pointer-events: none;
+}
+@media (max-width: 760px) {
+  #hint { right: 16px; bottom: 120px; } #msg { font-size: 17px; top: 30%; }
+  #hud { width: 200px; font-size: 13px; }
+}
